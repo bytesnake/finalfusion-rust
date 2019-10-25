@@ -312,11 +312,11 @@ where
     let n_labels = reader
         .read_u32::<LittleEndian>()
         .map_err(|e| ErrorKind::io_error("Cannot number of labels", e))?;
-    if n_labels > 0 {
+    /*if n_labels > 0 {
         return Err(
             ErrorKind::Format("fastText prediction models are not supported".into()).into(),
         );
-    }
+    }*/
 
     reader
         .read_u64::<LittleEndian>()
